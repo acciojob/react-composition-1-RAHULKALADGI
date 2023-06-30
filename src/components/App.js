@@ -14,7 +14,7 @@ const App = ()=> {
             <li onClick={()=>setCount(a[1].content)}>{a[1].title} {a[1].content}</li>
             <li onClick={()=>setCount(a[2].content)}>{a[2].title} {a[2].content}</li>
         </ul>
-        <p>This is the content of Tab {count}</p>
+        <p>This is the content for Tab {count}.</p>
     </div>
    )
 }
