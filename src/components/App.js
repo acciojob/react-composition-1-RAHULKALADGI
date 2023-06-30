@@ -2,23 +2,21 @@
 import React ,{useState} from "react";
 import './../styles/App.css';
 
-const App = ({a}) => {
-  let [change , setChange] = useState(0);
-  let [name ,setName] = useState("");
-  function display(e) {
-    setChange(e.content);
-    setName(e.title);
-  }
-  return (
+let a = [{title : "Tab" , content : 1} , {title : "Tab" , content : 2} , {title : "Tab" , content : 3} ]
+
+const App = ()=> {
+   let [count , setCount] = useState();
+
+   return (
     <div>
         <ul>
-          a.map((e)=> (
-            <li onClick={display(e)}>{a.title} {a.content}</li>
-          ))
+            <li onClick={()=>setCount(a[0].content)}>{a[0].title} {a[0].content}</li>
+            <li onClick={()=>setCount(a[1].content)}>{a[1].title} {a[1].content}</li>
+            <li onClick={()=>setCount(a[2].content)}>{a[2].title} {a[2].content}</li>
         </ul>
-        <p>This is the content for {name} {change}.</p>
+        <p>This is the content of Tab {count}</p>
     </div>
-  )
+   )
 }
 
 export default App
